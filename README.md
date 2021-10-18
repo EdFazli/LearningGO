@@ -1,4 +1,7 @@
 # LearningGO
 Learning GO programming
   
-Download GO : [https://golang.org/dl/](https://golang.org/dl/)
+Download GO : [https://golang.org/dl/](https://golang.org/dl/)  
+VSCode Extension : 
+- [GO](golang.go)
+- Open Command Palette and search GO Tools. Install all tools listed
