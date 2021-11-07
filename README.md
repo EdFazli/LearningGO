@@ -7,10 +7,8 @@ VSCode Extension :
 - Open Command Palette and search GO Tools. Install all tools listed . 
   
 ## GO Commands  
-1. *go version*  
-- To check GO version.  
+1. *go version* - To check GO version.  
   
 ## GO Tools  
-1. **hey**  
-- Load tests HTTP servers.  
+1. **hey** - Load tests HTTP servers.  
   
