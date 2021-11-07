@@ -16,4 +16,7 @@ VSCode Extension :
   
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
+> go install github.com/rakyll/hey@latest  
+  
+  
   
