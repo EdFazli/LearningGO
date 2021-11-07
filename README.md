@@ -21,9 +21,9 @@ VSCode Extension :
 2. **goimports** - Enhanced version of `go fmt` which also cleans up import statements.  
 > go install golang.org/x/tools/cmd/goimport@latest.  
 > go imports -l -w .  
->   "-l" = prints the file with incorrect formatting.  
->   "-w"= modify the files in place.  
->   "."  = specifies the file to be scanned which in this case is everything in the current directory and all of its subdirectory.  
+>       "-l" = prints the file with incorrect formatting.  
+>       "-w"= modify the files in place.  
+>       "."  = specifies the file to be scanned which in this case is everything in the current directory and all of its subdirectory.  
      
 
   
