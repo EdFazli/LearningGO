@@ -2,6 +2,7 @@
 Learning GO programming.
   
 > Download GO : [https://golang.org/dl/](https://golang.org/dl/)  
+> Effective GO Documentation : https://golang.org/doc/effective_go#introduction  
   
 VSCode Extension : 
 - [GO](golang.go)
