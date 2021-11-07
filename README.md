@@ -24,6 +24,14 @@ VSCode Extension :
 >> "-l" = prints the file with incorrect formatting.  
 >> "-w"= modify the files in place.  
 >> "."  = specifies the file to be scanned which in this case is everything in the current directory and all of its subdirectory.  
-     
-
+3. **golint** & **go vet** - To ensure the code follows sytle guidelines.  
+> go install golang.org/x/lint/golint@latest.  
+> golint ./...  
+> go vet ./...  
+4. **golangci-lint** - Combined tools for `golint`, `go vet` and set of other code quality tools.  
+> go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest.  
+> golangci-lint run.  
+>
+> To configure, go to root project and find .golangci.yml.  
+>> https://oreil.ly/vufj1  
   
