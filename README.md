@@ -33,5 +33,5 @@ VSCode Extension :
 > golangci-lint run.  
 >
 > To configure, go to root project and find .golangci.yml.  
->> https://oreil.ly/vufj1  
+>> Documentation: https://oreil.ly/vufj1  
   
