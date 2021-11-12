@@ -15,7 +15,8 @@ VSCode Extension :
 4. `go build` - Build binary for later use. Creates executable .exe file.  
 5. `go install` - Takes an argument(source code repository) followed by an @ plus the version of the tool. It then downloads, compiles, and install into *$GOPATH/bin* direrctory.  
 6. `go fmt` - Automatically reformat codes to match the standard format.  
-    
+7. `go mod init <repo>` - Modules initialization  
+      
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
 > go install github.com/rakyll/hey@latest  
