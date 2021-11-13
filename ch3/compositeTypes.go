@@ -49,4 +49,21 @@ func main() {
 	//slice only can be compare with nil
 	fmt.Println(X == nil) // prints false
 	fmt.Println(O == nil) // prints true
+
+	//Append - to grow slices
+	var u []int
+	fmt.Println("u = ", u) // u =  []
+	u = append(u, 90)
+	fmt.Println("u = ", u) // u =  [90]
+	var U = []int{4, 23, 42, 55}
+	fmt.Println("U = ", U) // U =  [4 23 42 55]
+	U = append(U, 89)
+	fmt.Println("U = ", U) // U =  [4 23 42 55 89]
+
+	//expand source slice to individual value
+	var r = []int{2, 4, 5, 6, 8}
+	fmt.Println("r = ", r) // r =  [2 4 5 6 8]
+	U = append(U, r...)
+	fmt.Println("U = ", U) // U =  [4 23 42 55 89 2 4 5 6 8]
+
 }
