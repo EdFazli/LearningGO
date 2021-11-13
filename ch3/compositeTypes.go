@@ -28,4 +28,7 @@ func main() {
 	fmt.Println("J = ", j) // J =  [4 43 67 86]
 	fmt.Println(k == i)    // prints true
 	fmt.Println("P = ", p) // P =  [[0 0 0] [0 0 0]]
+
+	//len function - takes array and returns its length
+	fmt.Println(len(z)) // 12
 }
