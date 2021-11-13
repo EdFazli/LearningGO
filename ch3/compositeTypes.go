@@ -22,13 +22,31 @@ func main() {
 	//2D array
 	var p [2][3]int
 
-	fmt.Println("X = ", x) // X =  [0 0 0]
-	fmt.Println("Y = ", y) // Y =  [15 22 35 53]
-	fmt.Println("Z = ", z) // Z =  [2 3 0 0 0 0 55 6 2 0 0 100]
-	fmt.Println("J = ", j) // J =  [4 43 67 86]
+	fmt.Println("x = ", x) // X =  [0 0 0]
+	fmt.Println("y = ", y) // Y =  [15 22 35 53]
+	fmt.Println("z = ", z) // Z =  [2 3 0 0 0 0 55 6 2 0 0 100]
+	fmt.Println("j = ", j) // J =  [4 43 67 86]
 	fmt.Println(k == i)    // prints true
-	fmt.Println("P = ", p) // P =  [[0 0 0] [0 0 0]]
+	fmt.Println("p = ", p) // P =  [[0 0 0] [0 0 0]]
 
 	//len function - takes array and returns its length
 	fmt.Println(len(z)) // 12
+
+	//SLices declaration
+	var O []int //returns nil
+	var X = []int{5, 77, 86, 1, 22, 52}
+
+	//Sparse slices - most elements are set to their zero value
+	var Z = [12]int{12, 13, 6: 55, 16, 12, 11: 1100}
+
+	//multidimensional slices
+	var P [][]int
+
+	fmt.Println("X = ", X) // X =  [5 77 86 1 22 52]
+	fmt.Println("Z = ", Z) // Z =  [12 13 0 0 0 0 55 16 12 0 0 1100]
+	fmt.Println("P = ", P) // P =  []
+
+	//slice only can be compare with nil
+	fmt.Println(X == nil) // prints false
+	fmt.Println(O == nil) // prints true
 }
