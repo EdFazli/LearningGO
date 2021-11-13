@@ -66,4 +66,18 @@ func main() {
 	U = append(U, r...)
 	fmt.Println("U = ", U) // U =  [4 23 42 55 89 2 4 5 6 8]
 
+	//understanding capacity
+	var C []int
+	fmt.Println(C, len(C), cap(C))
+	C = append(C, 10)
+	fmt.Println(C, len(C), cap(C))
+	C = append(C, 20)
+	fmt.Println(C, len(C), cap(C))
+	C = append(C, 30)
+	fmt.Println(C, len(C), cap(C))
+	C = append(C, 40)
+	fmt.Println(C, len(C), cap(C))
+	C = append(C, 50)
+	fmt.Println(C, len(C), cap(C))
+
 }
