@@ -68,16 +68,16 @@ func main() {
 
 	//understanding capacity
 	var C []int
-	fmt.Println(C, len(C), cap(C))
+	fmt.Println(C, len(C), cap(C)) // [] 0 0
 	C = append(C, 10)
-	fmt.Println(C, len(C), cap(C))
+	fmt.Println(C, len(C), cap(C)) // [10] 1 1
 	C = append(C, 20)
-	fmt.Println(C, len(C), cap(C))
+	fmt.Println(C, len(C), cap(C)) // [10 20] 2 2
 	C = append(C, 30)
-	fmt.Println(C, len(C), cap(C))
+	fmt.Println(C, len(C), cap(C)) // [10 20 30] 3 4
 	C = append(C, 40)
-	fmt.Println(C, len(C), cap(C))
+	fmt.Println(C, len(C), cap(C)) // [10 20 30 40] 4 4
 	C = append(C, 50)
-	fmt.Println(C, len(C), cap(C))
+	fmt.Println(C, len(C), cap(C)) // [10 20 30 40 50] 5 8
 
 }
