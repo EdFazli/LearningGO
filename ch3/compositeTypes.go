@@ -80,4 +80,20 @@ func main() {
 	C = append(C, 50)
 	fmt.Println(C, len(C), cap(C)) // [10 20 30 40 50] 5 8
 
+	//make - to specify the type, length and optionally the capacity
+	m := make([]int, 6)    // length and capacity = 6
+	fmt.Println("m = ", m) // m =  [0 0 0 0 0 0]
+
+	//specify initial length and capacity
+	M := make([]int, 5, 8) // length = 5 and capacity = 8
+	fmt.Println("M = ", M) // M =  [0 0 0 0 0]
+	M = append(M, 44)
+	fmt.Println("M = ", M) // M =  [0 0 0 0 0 44]
+
+	//non-nil slice with length of 0
+	n := make([]int, 0, 10) // length = 0 and capacity = 10
+	fmt.Println("n = ", n)  // n =  []
+	n = append(n, 1, 2, 3, 4, 5, 6)
+	fmt.Println("n = ", n) // n =  [1 2 3 4 5 6]
+
 }
