@@ -187,4 +187,12 @@ func main() {
 	fmt.Println(V, ok) // 15 true
 	vv, ok := E["cinnamon"]
 	fmt.Println(vv, ok) // 0 false
+
+	//deleting Maps
+	ee := map[string]int{
+		"hello":   2,
+		"goodbye": 4,
+	}
+	delete(ee, "goodbye")
+
 }
