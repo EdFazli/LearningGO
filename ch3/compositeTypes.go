@@ -233,4 +233,24 @@ func main() {
 	fmt.Println(bob.age)   // 35
 	fmt.Println(fred)      // { 0 }
 
+	//anonymous struct - to translate external data to struct or vice versa
+	var people struct {
+		name  string
+		age   int
+		house string
+	}
+	people.name = "Kyle"
+	people.age = 23
+	people.house = "Condo"
+	fmt.Println(people.name+",", people.age, "has a "+people.house) // Kyle, 23 has a Condo
+
+	pet := struct {
+		name string
+		kind string
+	}{
+		name: "Garfield",
+		kind: "cat",
+	}
+	fmt.Println(pet.name) // Garfield
+
 }
