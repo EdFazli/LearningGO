@@ -154,4 +154,24 @@ func main() {
 	fmt.Println("qa: ", qa) // qa:  [72 101 108 108 111 32 87 111 114 108 100 33]
 	fmt.Println("qs: ", qs) // qs:  [72 101 108 108 111 32 87 111 114 108 100 33]
 
+	//declaring Maps
+	var nilMap map[string]int
+	fmt.Println("nilMap: ", nilMap) // nilMap:  map[]
+	fmt.Println(nilMap == nil)      // prints true
+	mapLiteral := map[string]int{}
+	fmt.Println("mapLiteral: ", mapLiteral) // mapLiteral:  map[]
+	teams := map[string][]string{
+		"Developer": {"Mark", "Ralph", "George"},
+		"Infra":     {"Ed", "Venc"},
+	}
+	fmt.Println("teams: ", teams) // teams:  map[Developer:[Mark Ralph George] Infra:[Ed Venc]]
+
+	//declare Maps with default size
+	ages := make(map[string]int, 10)
+	ages["Simon"] = 24
+	ages["Kira"] = 18
+
+	fmt.Println(ages)
+	fmt.Println(ages["Simon"])
+	fmt.Println(ages["Kira"])
 }
