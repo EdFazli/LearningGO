@@ -96,4 +96,16 @@ func main() {
 	n = append(n, 1, 2, 3, 4, 5, 6)
 	fmt.Println("n = ", n) // n =  [1 2 3 4 5 6]
 
+	//slicing slices
+	q := []int{2, 4, 6, 8}
+	w := q[:2]
+	a := q[1:]
+	s := q[1:3]
+	d := q[:]
+	fmt.Println("q: ", q) // q:  [2 4 6 8]
+	fmt.Println("w: ", w) // w:  [2 4]
+	fmt.Println("a: ", a) // a:  [4 6 8]
+	fmt.Println("s: ", s) // s:  [4 6]
+	fmt.Println("d: ", d) // d:  [2 4 6 8]
+
 }
