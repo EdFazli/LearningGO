@@ -171,7 +171,20 @@ func main() {
 	ages["Simon"] = 24
 	ages["Kira"] = 18
 
-	fmt.Println(ages)
-	fmt.Println(ages["Simon"])
-	fmt.Println(ages["Kira"])
+	fmt.Println(ages)          // map[Kira:18 Simon:24]
+	fmt.Println(ages["Simon"]) // 24
+	fmt.Println(ages["Kira"])  // 18
+
+	//comma ok idiom - to check whether a key is in the map
+	E := map[string]int{
+		"sugar": 10,
+		"salt":  15,
+	}
+
+	v, ok := E["sugar"]
+	fmt.Println(v, ok) // 10 true
+	V, ok := E["salt"]
+	fmt.Println(V, ok) // 15 true
+	vv, ok := E["cinnamon"]
+	fmt.Println(vv, ok) // 0 false
 }
