@@ -108,17 +108,33 @@ func main() {
 	fmt.Println("s: ", s) // s:  [4 6]
 	fmt.Println("d: ", d) // d:  [2 4 6 8]
 
-	// examples of more confusing slices with the use of append - NOT RECOMMENDED!
+	//examples of more confusing/overwriting slices with the use of append - NOT RECOMMENDED!
 	f := make([]int, 0, 5)
 	f = append(f, 1, 2, 3, 4)
 	g := f[:2]
 	h := f[2:]
-	fmt.Println(cap(f), cap(g), cap(h))
+	fmt.Println(cap(f), cap(g), cap(h)) // 5 5 3
 	g = append(g, 30, 40, 50)
 	f = append(f, 60)
 	h = append(h, 70)
-	fmt.Println("f: ", f)
-	fmt.Println("g: ", g)
-	fmt.Println("h: ", h)
+	fmt.Println("f: ", f) // f:  [1 2 30 40 70]
+	fmt.Println("g: ", g) // g:  [1 2 30 40 70]
+	fmt.Println("h: ", h) // h:  [30 40 70]
+
+	//full slice expression protect against append
+	//g := f[:2:2] - has capacity of 2
+	//h := f[2:4:4] - has capacity of 2
+
+	//copy function
+	F := []int{2, 4, 6, 8}
+	G := make([]int, 3) // length of 3 will be copied from F
+	num := copy(G, F)
+	fmt.Println(G, num) // [2 4 6] 3
+
+	//copy from middle of source slice
+	Q := []int{1, 2, 3, 4}
+	W := make([]int, 2)
+	copy(W, Q[1:3])
+	fmt.Println("W: ", W)
 
 }
