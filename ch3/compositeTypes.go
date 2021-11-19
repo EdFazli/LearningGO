@@ -208,4 +208,29 @@ func main() {
 		fmt.Println("100 is in the set")
 	}
 
+	//struct - to group together any related data
+	type person struct {
+		name string
+		age  int
+		pet  string
+	}
+
+	//declare struct
+	var fred person
+	bob := person{
+		"Bob",
+		35,
+		"snake",
+	} // struct literal
+	tasya := person{
+		age:  44,
+		pet:  "cat",
+		name: "Tasya",
+	}
+
+	// a field in struct is accessed with dotted notation
+	fmt.Println(tasya.pet) // cat
+	fmt.Println(bob.age)   // 35
+	fmt.Println(fred)      // { 0 }
+
 }
