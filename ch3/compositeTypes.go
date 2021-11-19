@@ -108,4 +108,17 @@ func main() {
 	fmt.Println("s: ", s) // s:  [4 6]
 	fmt.Println("d: ", d) // d:  [2 4 6 8]
 
+	// examples of more confusing slices with the use of append - NOT RECOMMENDED!
+	f := make([]int, 0, 5)
+	f = append(f, 1, 2, 3, 4)
+	g := f[:2]
+	h := f[2:]
+	fmt.Println(cap(f), cap(g), cap(h))
+	g = append(g, 30, 40, 50)
+	f = append(f, 60)
+	h = append(h, 70)
+	fmt.Println("f: ", f)
+	fmt.Println("g: ", g)
+	fmt.Println("h: ", h)
+
 }
