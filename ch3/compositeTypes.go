@@ -135,6 +135,23 @@ func main() {
 	Q := []int{1, 2, 3, 4}
 	W := make([]int, 2)
 	copy(W, Q[1:3])
-	fmt.Println("W: ", W)
+	fmt.Println("W: ", W) // W:  [2 3]
+
+	//converting rune to string
+	var aa rune = 'x'
+	var ss string = string(aa)
+	var bb byte = 'y'
+	var dd string = string(bb)
+
+	fmt.Println("ss: ", ss) // ss:  x
+	fmt.Println("dd: ", dd) // dd:  y
+
+	//converting string to slices
+	var qq string = "Hello World!"
+	var qa []byte = []byte(qq)
+	var qs []rune = []rune(qq)
+
+	fmt.Println("qa: ", qa) // qa:  [72 101 108 108 111 32 87 111 114 108 100 33]
+	fmt.Println("qs: ", qs) // qs:  [72 101 108 108 111 32 87 111 114 108 100 33]
 
 }
