@@ -253,4 +253,6 @@ func main() {
 	}
 	fmt.Println(pet.name) // Garfield
 
+	//comparing and converting struct - only when both have the same names, order and types
+
 }
