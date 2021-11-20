@@ -168,4 +168,11 @@ func main() {
 		7 33 !
 	*/
 
+	//modifying the value doesnt modify the source
+	oddVals := []int{1, 3, 5, 7, 9, 11}
+	for _, v := range oddVals {
+		v *= 2
+	}
+	fmt.Println(oddVals) // 1 3 5 7 9 11
+
 }
