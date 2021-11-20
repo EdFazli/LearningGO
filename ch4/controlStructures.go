@@ -269,5 +269,22 @@ loop:
 		exit the loop
 	*/
 
-	//
+	//blank switch - allows to use any boolean comparison for each case
+	words2 := []string{"hi", "salutations", "hello"}
+	for _, word := range words2 {
+		switch wordLen := len(word); {
+		case wordLen < 5:
+			fmt.Println(word, "is a short word")
+		case wordLen > 10:
+			fmt.Println(word, "is a long word!")
+		default:
+			fmt.Println(word, "is exactly the right length.")
+		}
+	}
+	/*
+		hi is a short word
+		salutations is a long word!
+		hello is exactly the right length.
+	*/
+
 }
