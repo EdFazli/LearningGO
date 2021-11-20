@@ -85,4 +85,18 @@ func main() {
 	5 12
 	*/
 
+	//ignoring the key in for-range loop
+	for _, v := range evenVals {
+		fmt.Println(v)
+	}
+	/* prints value only
+	2
+	4
+	6
+	8
+	10
+	12
+	*/
+
+	//
 }
