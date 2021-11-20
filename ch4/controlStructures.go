@@ -71,4 +71,18 @@ func main() {
 		fmt.Println(i) // prints i if the above condition not met
 	}
 
+	//for-range loop with a slice
+	evenVals := []int{2, 4, 6, 8, 10, 12}
+	for i, v := range evenVals {
+		fmt.Println(i, v)
+	}
+	/* prints position and value
+	0 2
+	1 4
+	2 6
+	3 8
+	4 10
+	5 12
+	*/
+
 }
