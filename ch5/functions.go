@@ -7,7 +7,7 @@ import (
 func main() {
 	fmt.Println("This is functions examples")
 	result := div(5, 2)
-	fmt.Println(result)
+	fmt.Println(result) // 2
 }
 
 //declaring function named div
