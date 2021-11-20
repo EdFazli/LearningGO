@@ -34,4 +34,16 @@ func main() {
 		fmt.Println("Thats a good number: ", x) // Thats a good number:  1
 	}
 
+	//complete for statement
+	for i := 0; i < 10; i++ {
+		fmt.Println(i) // 0 1 2 3 4 5 6 7 8 9
+	}
+
+	//condition-only for statement same as while statement in C
+	i := 1
+	for i < 100 {
+		fmt.Println(i) // 1 2 4 8 16 32 64
+		i *= 2
+	}
+
 }
