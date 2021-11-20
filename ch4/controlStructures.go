@@ -114,4 +114,35 @@ func main() {
 	Wilma
 	*/
 
+	//iterating over maps
+	//map iteration order varies - security reason to prevent Hash DoS
+	m := map[string]int{
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+
+	for i := 0; i < 3; i++ {
+		fmt.Println("Loop ", i)
+		for k, v := range m {
+			fmt.Println(k, v)
+		}
+	}
+	/*
+		Loop  0
+		b 2
+		c 3
+		a 1
+		Loop  1
+		a 1
+		b 2
+		c 3
+		Loop  2
+		a 1
+		b 2
+		c 3
+	*/
+
+	//iterating over strings
+
 }
