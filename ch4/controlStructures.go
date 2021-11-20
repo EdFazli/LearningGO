@@ -46,4 +46,12 @@ func main() {
 		i *= 2
 	}
 
+	//infinite for statement - loops forever
+	for {
+		fmt.Println("This is infinite loop")
+		if !(i == 4) { //CONDITION to exit from the loop
+			break // to exit from the loop
+		}
+	}
+
 }
