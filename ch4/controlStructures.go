@@ -54,4 +54,21 @@ func main() {
 		}
 	}
 
+	//using continue to make code clearer - replacing chain of if/else statement
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Println("Naruto")
+			continue
+		}
+		if i%3 == 0 {
+			fmt.Println("Boruto")
+			continue
+		}
+		if i%5 == 0 {
+			fmt.Println("Sasuke")
+			continue
+		}
+		fmt.Println(i) // prints i if the above condition not met
+	}
+
 }
