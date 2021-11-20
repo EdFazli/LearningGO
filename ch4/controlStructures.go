@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
 	fmt.Println("This is blocks, shadows and control structures examples")
@@ -21,5 +24,14 @@ func main() {
 		fmt.Println(X, Y) // 5 20
 	}
 	fmt.Println(X) // 10
+
+	//scoping variable to an if statement
+	if x := rand.Intn(10); x == 0 {
+		fmt.Println("That's too low")
+	} else if x > 5 {
+		fmt.Println("Thats too big: ", x)
+	} else {
+		fmt.Println("Thats a good number: ", x) // Thats a good number:  1
+	}
 
 }
