@@ -175,4 +175,26 @@ func main() {
 	}
 	fmt.Println(oddVals) // 1 3 5 7 9 11
 
+	//labeling for statement - to escape nested loop
+	examples := []string{"hello", "apple_n!"}
+outer:
+	for _, etc := range examples {
+		for i, r := range etc {
+			fmt.Println(i, r, string(r))
+			if r == 'l' {
+				continue outer
+			}
+		}
+		fmt.Println()
+	}
+	/*
+		0 104 h
+		1 101 e
+		2 108 l
+		0 97 a
+		1 112 p
+		2 112 p
+		3 108 l
+	*/
+
 }
