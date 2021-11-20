@@ -98,5 +98,20 @@ func main() {
 	12
 	*/
 
-	//
+	//ignoring the value in for-range loop
+	uniqueNames := map[string]bool{
+		"Fred":  true,
+		"Raul":  true,
+		"Wilma": true,
+	}
+
+	for k := range uniqueNames {
+		fmt.Println(k)
+	}
+	/* prints key only
+	Fred
+	Raul
+	Wilma
+	*/
+
 }
