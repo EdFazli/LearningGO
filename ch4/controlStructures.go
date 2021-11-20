@@ -197,4 +197,30 @@ outer:
 		3 108 l
 	*/
 
+	//comparing for-range loop and complete for loop
+	evenVals2 := []int{2, 4, 6, 8, 10}
+	for i, v := range evenVals2 {
+		if i == 0 {
+			continue
+		}
+		if i == len(evenVals2)-2 {
+			break
+		}
+		fmt.Println(i, v)
+	}
+	/*
+		1 4
+		2 6
+	*/
+
+	//recommended using standard loop when not iterating 1st element to the last element
+	for i := 1; i < len(evenVals2)-2; i++ {
+		fmt.Println(i, evenVals2[i])
+	}
+	/*
+		1 4
+		2 6
+	*/
+
+	//
 }
