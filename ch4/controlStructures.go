@@ -231,7 +231,7 @@ outer:
 		case 5:
 			wordLen := len(word)
 			fmt.Println(word, "is exactly the right length: ", wordLen)
-		case 6, 7, 8, 9:
+		case 6, 7, 8, 9: // empty case means nothing happens
 		default:
 			fmt.Println(word, "is a long word!")
 		}
@@ -241,6 +241,32 @@ outer:
 		cow is a short word
 		smile is exactly the right length:  5
 		anthropologist is a long word!
+	*/
+
+	//switch with label
+loop:
+	for i := 0; i < 10; i++ {
+		switch {
+		case i%2 == 0:
+			fmt.Println(i, "is even")
+		case i%3 == 0:
+			fmt.Println(i, "is divisible by 3 not 2")
+		case i%7 == 0:
+			fmt.Println("exit the loop")
+			break loop
+		default:
+			fmt.Println(i, "is boring")
+		}
+	}
+	/*
+		0 is even
+		1 is boring
+		2 is even
+		3 is divisible by 3 not 2
+		4 is even
+		5 is boring
+		6 is even
+		exit the loop
 	*/
 
 	//
