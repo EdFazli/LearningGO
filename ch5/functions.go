@@ -1,7 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"os"
 )
 
 //using struct to simulate named parameters
@@ -34,6 +36,14 @@ func main() {
 	fmt.Println(addTo(3, a...))                    // [7 6]
 	fmt.Println(addTo(3, []int{1, 2, 3, 4, 5}...)) // [4 5 6 7 8]
 
+	//multiple return values
+	results, remainder, err := divAndRemainder(5, 2)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	fmt.Println(results, remainder) // 2 1
+
 }
 
 //declaring function named div
@@ -55,4 +65,12 @@ func addTo(base int, vals ...int) []int {
 		out = append(out, base+v)
 	}
 	return out
+}
+
+//multiple return values
+func divAndRemainder(numerator int, denominator int) (int, int, error) {
+	if denominator == 0 {
+		return 0, 0, errors.New("cannot divide by error")
+	}
+	return numerator / denominator, numerator % denominator, nil
 }
