@@ -14,6 +14,9 @@ type MyFuncOpts struct {
 	Age       int
 }
 
+//functions are values - with examples of calculator
+type opFuncType func(int, int) int
+
 func main() {
 	fmt.Println("This is functions examples")
 	result := div(5, 2)
@@ -126,7 +129,7 @@ func sub(i int, j int) int      { return i - j }
 func mul(i int, j int) int      { return i * j }
 func division(i int, j int) int { return i / j }
 
-var opMap = map[string]func(int, int) int{
+var opMap = map[string]opFuncType{
 	"+": add,
 	"-": sub,
 	"*": mul,
