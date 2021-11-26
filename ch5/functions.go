@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 //using struct to simulate named parameters
@@ -44,6 +45,50 @@ func main() {
 	}
 	fmt.Println(results, remainder) // 2 1
 
+	//functions are values - with examples of calculator
+	expressions := [][]string{
+		{"2", "+", "3"},
+		{"2", "-", "3"},
+		{"2", "*", "3"},
+		{"2", "/", "3"},
+		{"2", "%", "3"},
+		{"two", "+", "three"},
+		{"5"},
+	}
+	for _, expression := range expressions {
+		if len(expression) != 3 {
+			fmt.Println("invalid expression: ", expression)
+			continue
+		}
+		p1, errorz := strconv.Atoi(expression[0])
+		if errorz != nil {
+			fmt.Println(errorz)
+			continue
+		}
+		op := expression[1]
+		opFunc, ok := opMap[op]
+		if !ok {
+			fmt.Println("unsupported operator: ", op)
+			continue
+		}
+		p2, errorz := strconv.Atoi(expression[2])
+		if errorz != nil {
+			fmt.Println(errorz)
+			continue
+		}
+		result := opFunc(p1, p2)
+		fmt.Println(result)
+	}
+	/*
+		5
+		-1
+		6
+		0
+		unsupported operator:  %
+		strconv.Atoi: parsing "two": invalid syntax
+		invalid expression:  [5]
+	*/
+
 }
 
 //declaring function named div
@@ -73,4 +118,17 @@ func divAndRemainder(numerator int, denominator int) (int, int, error) {
 		return 0, 0, errors.New("cannot divide by error")
 	}
 	return numerator / denominator, numerator % denominator, nil
+}
+
+//functions are values - with examples of calculator
+func add(i int, j int) int      { return i + j }
+func sub(i int, j int) int      { return i - j }
+func mul(i int, j int) int      { return i * j }
+func division(i int, j int) int { return i / j }
+
+var opMap = map[string]func(int, int) int{
+	"+": add,
+	"-": sub,
+	"*": mul,
+	"/": division,
 }
