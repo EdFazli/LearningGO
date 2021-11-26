@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 )
 
@@ -16,6 +17,13 @@ type MyFuncOpts struct {
 
 //functions are values - with examples of calculator
 type opFuncType func(int, int) int
+
+//passing function as parameters
+type Person struct {
+	firstName string
+	lastName  string
+	age       int
+}
 
 func main() {
 	fmt.Println("This is functions examples")
@@ -105,6 +113,24 @@ func main() {
 		printing 3 from inside of anonymous function
 		printing 4 from inside of anonymous function
 	*/
+
+	//passing function as parameters
+	people := []Person{
+		{"Pat", "Patterson", 37},
+		{"Tracy", "Bobbert", 23},
+		{"Fred", "Fredson", 18},
+	}
+	fmt.Println(people) // [{Pat Patterson 37} {Tracy Bobbert 23} {Fred Fredson 18}]
+
+	sort.Slice(people, func(i int, j int) bool {
+		return people[i].lastName < people[j].lastName
+	})
+	fmt.Println(people) // [{Tracy Bobbert 23} {Fred Fredson 18} {Pat Patterson 37}]
+
+	sort.Slice(people, func(i int, j int) bool {
+		return people[i].age < people[j].age
+	})
+	fmt.Println(people) // [{Fred Fredson 18} {Tracy Bobbert 23} {Pat Patterson 37}]
 
 }
 
