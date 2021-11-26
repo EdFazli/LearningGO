@@ -132,6 +132,18 @@ func main() {
 	})
 	fmt.Println(people) // [{Fred Fredson 18} {Tracy Bobbert 23} {Pat Patterson 37}]
 
+	//returning functions from functions
+	twoBase := makeMult(2)
+	threeBase := makeMult(3)
+	for i := 0; i < 3; i++ {
+		fmt.Println(twoBase(i), threeBase(i))
+	}
+	/*
+		0 0
+		2 3
+		4 6
+	*/
+
 }
 
 //declaring function named div
@@ -174,4 +186,11 @@ var opMap = map[string]opFuncType{
 	"-": sub,
 	"*": mul,
 	"/": division,
+}
+
+//returning functions from functions
+func makeMult(base int) func(int) int {
+	return func(factor int) int {
+		return base * factor
+	}
 }
