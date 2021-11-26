@@ -92,6 +92,20 @@ func main() {
 		invalid expression:  [5]
 	*/
 
+	//anonymous functions - useful for defer statement and launching goroutines
+	for i := 0; i < 5; i++ {
+		func(j int) {
+			fmt.Println("printing", j, "from inside of anonymous function")
+		}(i)
+	}
+	/*
+		printing 0 from inside of anonymous function
+		printing 1 from inside of anonymous function
+		printing 2 from inside of anonymous function
+		printing 3 from inside of anonymous function
+		printing 4 from inside of anonymous function
+	*/
+
 }
 
 //declaring function named div
