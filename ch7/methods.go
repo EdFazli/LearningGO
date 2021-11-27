@@ -21,6 +21,17 @@ type IntTree struct {
 	left, right *IntTree
 }
 
+//iota for enumerations
+// type mailCategory int
+
+// const (
+// 	uncategorized mailCategory = iota
+// 	personal
+// 	spam
+// 	social
+// 	ads
+// )
+
 //Methods declaration
 func (p Person) String() string {
 	return fmt.Sprintf("%s %s, age %d", p.firstName, p.lastName, p.age)
