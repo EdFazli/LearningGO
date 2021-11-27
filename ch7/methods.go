@@ -32,6 +32,21 @@ type IntTree struct {
 // 	ads
 // )
 
+//embedding for composition
+type Employee struct {
+	Name string
+	ID   string
+}
+
+func (e Employee) Description() string {
+	return fmt.Sprintf("%s (%s)", e.Name, e.ID)
+}
+
+type Manager struct {
+	Employee
+	Reports []Employee
+}
+
 //Methods declaration
 func (p Person) String() string {
 	return fmt.Sprintf("%s %s, age %d", p.firstName, p.lastName, p.age)
@@ -101,6 +116,18 @@ func main() {
 	it = it.Insert(2)
 	fmt.Println(it.Contains(2))  // true
 	fmt.Println(it.Contains(12)) // false
+
+	//embedding for composition
+	m := Manager{
+		Employee: Employee{
+			Name: "Bob",
+			ID:   "22341",
+		},
+		Reports: []Employee{},
+	}
+
+	fmt.Println(m.ID)            // 22341
+	fmt.Println(m.Description()) // Bob (22341)
 
 }
 
