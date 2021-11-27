@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"time"
 )
 
@@ -45,6 +46,43 @@ func (e Employee) Description() string {
 type Manager struct {
 	Employee
 	Reports []Employee
+}
+
+// interfaces example - https://gobyexample.com/interfaces
+type geometry interface {
+	area() float64
+	perim() float64
+}
+
+type rect struct {
+	width, height float64
+}
+
+type circle struct {
+	radius float64
+}
+
+// interfaces example - https://gobyexample.com/interfaces
+func (r rect) area() float64 {
+	return r.width * r.height
+}
+
+func (r rect) perim() float64 {
+	return 2*r.width + 2*r.height
+}
+
+func (c circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func (c circle) perim() float64 {
+	return 2 * math.Pi * c.radius
+}
+
+func measure(g geometry) {
+	fmt.Println(g)
+	fmt.Println(g.area())
+	fmt.Println(g.perim())
 }
 
 //Methods declaration
@@ -129,6 +167,20 @@ func main() {
 	fmt.Println(m.ID)            // 22341
 	fmt.Println(m.Description()) // Bob (22341)
 
+	// interfaces example - https://gobyexample.com/interfaces
+	r := rect{width: 3, height: 4}
+	C := circle{radius: 5}
+
+	measure(r)
+	measure(C)
+	/*
+		{3 4}
+		12
+		14
+		{5}
+		78.53981633974483
+		31.41592653589793
+	*/
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>MAIN FUNCTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
