@@ -39,5 +39,8 @@ VSCode Extension :
 4. **shadow** - To detect shadowed variables. Include shadow in vet task in Makefile.  
 > go install golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow@latest
 > shadow ./...  
-  
+5. **wire** - A dependency injection helper.
+> go get github.com/google/wire/cmd/wire
+>> Documentation: https://github.com/google/wire
+
   
