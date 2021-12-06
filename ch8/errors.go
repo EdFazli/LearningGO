@@ -29,6 +29,14 @@ func main() {
 			fmt.Println(wrappedErrs)
 		}
 	}
+
+	// panic example
+	//doPanic(os.Args[0])
+
+	// recover example
+	for _, val := range []int{1, 2, 0, 6} {
+		div60(val)
+	}
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>MAIN FUNCTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
@@ -41,4 +49,19 @@ func fileChecker(name string) error {
 	}
 	f.Close()
 	return nil
+}
+
+// panic example
+// func doPanic(msg string) {
+// 	panic(msg)
+// }
+
+// recover example
+func div60(i int) {
+	defer func() {
+		if v := recover(); v != nil {
+			fmt.Println(v)
+		}
+	}()
+	fmt.Println(60 / i)
 }
