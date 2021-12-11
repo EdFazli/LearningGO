@@ -21,6 +21,7 @@ VSCode Extension :
 9. `go list -m -versions MODULE_PATH` - To check versions of the module available.  
 10. `go get MODULE_PATH@VERSION` - To upgrade module version.  
 11. `go get -u=patch MODULE_PATH` - To upgrade patch version for the same module version.  
+12. `go mod tidy` - To remove unused versions.  
 
       
 ## GO Tools  
