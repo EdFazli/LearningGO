@@ -22,7 +22,7 @@ VSCode Extension :
 10. `go get MODULE_PATH@VERSION` - To upgrade module version.  
 11. `go get -u=patch MODULE_PATH` - To upgrade patch version for the same module version.  
 12. `go mod tidy` - To remove unused versions.  
-
+13. `go mod vendor` - To create vendor directory contains all of modules dependencies.  
       
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
