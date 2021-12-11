@@ -18,6 +18,8 @@ VSCode Extension :
 6. `go fmt` - Automatically reformat codes to match the standard format.  
 7. `go mod init <repo>` - Modules initialization  
 8. `go doc PACKAGE_NAME.IDENTIFIER_NAME` - To display documentation for specific identifier in the package.  
+9. `go list -m -versions MODULE_PATH` - To check versions of the module available.  
+
       
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
