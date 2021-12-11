@@ -3,7 +3,8 @@ Learning GO programming.
   
 > Download GO : [https://golang.org/dl/](https://golang.org/dl/)  
 > Effective GO Documentation : https://golang.org/doc/effective_go#introduction  
-> How Do You Structure Your Go Apps : https://oreil.ly/0zHY4
+> How Do You Structure Your Go Apps : https://oreil.ly/0zHY4  
+> FOSS - Open Source Licenses : https://oreil.ly/KVlrd  
   
 VSCode Extension : 
 - [GO](golang.go)
