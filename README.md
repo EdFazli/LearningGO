@@ -17,6 +17,7 @@ VSCode Extension :
 5. `go install` - Takes an argument(source code repository) followed by an @ plus the version of the tool. It then downloads, compiles, and install into *$GOPATH/bin* direrctory.  
 6. `go fmt` - Automatically reformat codes to match the standard format.  
 7. `go mod init <repo>` - Modules initialization  
+8. `go doc PACKAGE_NAME.IDENTIFIER_NAME` - To display documentation for specific identifier in the package.  
       
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
