@@ -12,7 +12,7 @@ import (
 func main() {
 	fmt.Println("This is a standard library examples")
 
-	//Encoding and decoding JSON streams
+	//Custom marshal JSON
 	blob := `["gopher","armadillo","zebra","unknown","gopher","bee","gopher","zebra"]`
 	var zoo []Animal
 	if err := json.Unmarshal([]byte(blob), &zoo); err != nil {
@@ -31,7 +31,7 @@ func main() {
 
 //>>>>>>>>>>>>>>>>>>>>>>>>MAIN FUNCTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
 
-//Encoding and decoding JSON streams
+//Custom marshal JSON
 type Animal int
 
 const (
