@@ -1,18 +1,12 @@
 .DEFAULT_GOAL := build
 
-fmt:
-	go fmt ./...
-.PHONY:fmt
+.PHONY: build run-ok run-cancel
 
-lint:
-	golint ./...
-.PHONY:lint
+build:
+	go build
 
-vet: fmt
-	go vet ./...
-	shadow ./...
-.PHONY:vet
+run-ok: build
+	./ch12.1 false
 
-build: vet
-	go build main.go
-.PHONY:build
+run-cancel: build
+	./ch12.1 true
