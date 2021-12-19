@@ -26,6 +26,7 @@ VSCode Extension :
 13. `go mod vendor` - To create vendor directory contains all of modules dependencies.  
 14. `go test` - To run test and generate report.  
 15. `go test -v -cover -coverprofile=c.out` - Calculates coverage information and includes summary in the test output and save into a file.  
+16. `go tool cover -html=c.out` - Generates HTML representation of the source code.  
   
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
