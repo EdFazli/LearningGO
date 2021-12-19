@@ -25,7 +25,8 @@ VSCode Extension :
 12. `go mod tidy` - To remove unused versions.  
 13. `go mod vendor` - To create vendor directory contains all of modules dependencies.  
 14. `go test` - To run test and generate report.  
-        
+15. `go test -v -cover -coverprofile=c.out` - Calculates coverage information and includes summary in the test output and save into a file.  
+  
 ## GO Tools  
 1. **hey** - Load tests HTTP servers.  
 > go install github.com/rakyll/hey@latest  
