@@ -6,6 +6,7 @@ Learning GO programming.
 > How Do You Structure Your Go Apps : https://oreil.ly/0zHY4  
 > FOSS - Open Source Licenses : https://oreil.ly/KVlrd  
 > Profiling GO : https://oreil.ly/HHe9c  
+> Type Parameters-Draft Design : https://oreil.ly/POhSg  
   
 VSCode Extension : 
 - [GO](golang.go)
